@@ -1,0 +1,17 @@
+// File: server/examples/pool-hours-example.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<poolHours lastUpdated="2023-05-30">
+  <weekdays>
+    <session type="morning" hours="07:00-09:00" />
+    <session type="afternoon" hours="16:00-18:00" />
+  </weekdays>
+  <weekend>
+    <session type="morning" hours="08:00-10:00" />
+    <session type="afternoon" hours="15:00-17:00" />
+  </weekend>
+  <specialHours>
+    <day date="2023-06-05" reason="תחזוקה" hours="סגור" />
+    <day date="2023-06-10" reason="אירוע מיוחד" hours="10:00-14:00" />
+    <day date="2023-06-15" reason="שיפוצים" hours="סגור" />
+  </specialHours>
+</poolHours>

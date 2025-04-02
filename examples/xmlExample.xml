@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+  Golden Age App - Example XML Data
+  This file contains sample data structures used in the Golden Age elderly care facility app.
+  It serves as a reference for developers to understand the data formats used by the API.
+-->
+<goldenAgeData lastUpdated="2023-12-15">
+  <!-- User data example -->
+  <users>
+    <user id="1">
+      <firstName>דוד</firstName>
+      <lastName>כהן</lastName>
+      <email>david.cohen@example.com</email>
+      <phoneNumber>0541234567</phoneNumber>
+      <languagePreference>he</languagePreference>
+      <darkMode>false</darkMode>
+      <createdAt>2023-01-01T12:00:00.000Z</createdAt>
+      <updatedAt>2023-01-15T14:30:00.000Z</updatedAt>
+    </user>
+    <user id="2">
+      <firstName>שרה</firstName>
+      <lastName>לוי</lastName>
+      <email>sarah.levy@example.com</email>
+      <phoneNumber>0527654321</phoneNumber>
+      <languagePreference>he</languagePreference>
+      <darkMode>true</darkMode>
+      <createdAt>2023-01-05T10:30:00.000Z</createdAt>
+      <updatedAt>2023-01-20T09:15:00.000Z</updatedAt>
+    </user>
+  </users>
+
+  <!-- Restaurant data example -->
+  <restaurant>
+    <!-- Restaurant hours -->
+    <hours>
+      <weekdays>
+        <breakfast>07:00-09:30</breakfast>
+        <lunch>12:00-14:00</lunch>
+        <dinner>18:00-20:00</dinner>
+      </weekdays>
+      <weekend>
+        <breakfast>07:30-10:00</breakfast>
+        <lunch>12:30-14:30</lunch>
+        <dinner>18:00-20:00</dinner>
+      </weekend>
+      <specialHours>
+        <day date="2023-12-24" reason="חג החנוכה" hours="07:30-10:00, 12:30-14:30, 18:30-20:30" />
+        <day date="2023-12-25" reason="תחזוקה" hours="סגור בצהריים, 07:30-10:00, 18:00-20:00" />
+      </specialHours>
+    </hours>
+
+    <!-- Daily menu example -->
+    <menu date="2023-12-15">
+      <meals>
+        <breakfast>
+          <mainDishes>
+            <dish>חביתה</dish>
+            <dish>חלה עם גבינות</dish>
+            <dish>סלט ירקות</dish>
+          </mainDishes>
+          <sides>
+            <dish>יוגורט</dish>
+            <dish>גרנולה</dish>
+            <dish>פירות</dish>
+          </sides>
+          <drinks>
+            <drink>תה</drink>
+            <drink>קפה</drink>
+            <drink>מיץ תפוזים</drink>
+          </drinks>
+        </breakfast>
+        <lunch>
+          <mainDishes>
+            <dish>עוף צלוי</dish>
+            <dish>דג אפוי</dish>
+            <dish>קציצות ירק</dish>
+          </mainDishes>
+          <sides>
+            <dish>אורז</dish>
+            <dish>תפוחי אדמה</dish>
+            <dish>ירקות מאודים</dish>
+          </sides>
+          <desserts>
+            <dish>עוגת תפוחים</dish>
+            <dish>פירות</dish>
+          </desserts>
+        </lunch>
+        <dinner>
+          <mainDishes>
+            <dish>מרק ירקות</dish>
+            <dish>לזניה</dish>
+            <dish>סלט</dish>
+          </mainDishes>
+          <sides>
+            <dish>לחם</dish>
+            <dish>גבינות</dish>
+            <dish>ירקות חתוכים</dish>
+          </sides>
+          <desserts>
+            <dish>פודינג</dish>
+            <dish>פירות</dish>
+          </desserts>
+        </dinner>
+      </meals>
+    </menu>
+  </restaurant>
+
+  <!-- Activities data example -->
+  <activities>
+    <activity id="1">
+      <title>התעמלות בוקר</title>
+      <description>פעילות התעמלות קלה לבוקר טוב. מתאימה לכל הרמות וכוללת תרגילים לחיזוק השרירים ולשיפור הגמישות.</description>
+      <location>אולם התעמלות</location>
+      <date>2023-12-15</date>
+      <startTime>09:00</startTime>
+      <endTime>10:00</endTime>
+      <instructor>רונית לוי</instructor>
+      <maxParticipants>20</maxParticipants>
+      <currentParticipants>12</currentParticipants>
+      <equipment>נעלי ספורט נוחות, בקבוק מים</equipment>
+      <imageUrl>https://example.com/activities/morning-exercise.jpg</imageUrl>
+    </activity>
+    <activity id="2">
+      <title>חוג אמנות</title>
+      <description>ציור בצבעי מים. נלמד טכניקות בסיסיות וניצור אמנות יפה.</description>
+      <location>חדר אמנות</location>
+      <date>2023-12-15</date>
+      <startTime>11:00</startTime>
+      <endTime>12:30</endTime>
+      <instructor>דוד כהן</instructor>
+      <maxParticipants>15</maxParticipants>
+      <currentParticipants>8</currentParticipants>
+      <equipment>כל הציוד מסופק</equipment>
+      <imageUrl>https://example.com/activities/art-class.jpg</imageUrl>
+    </activity>
+    <activityRegistration userId="1" activityId="1" registeredAt="2023-12-10T14:30:00.000Z" />
+  </activities>
+
+  <!-- Messages data example -->
+  <messages>
+    <message id="1">
+      <sender>
+        <id>2</id>
+        <name>צוות רפואי</name>
+      </sender>
+      <recipient>
+        <id>1</id>
+        <name>דוד כהן</name>
+      </recipient>
+      <subject>תזכורת לפגישה רפואית</subject>
+      <content>תזכורת: פגישה עם דוקטור כהן מחר בשעה 10:00</content>
+      <createdAt>2023-12-14T12:00:00.000Z</createdAt>
+      <read>false</read>
+      <readAt>null</readAt>
+    </message>
+    <message id="2">
+      <sender>
+        <id>3</id>
+        <name>צוות פעילויות</name>
+      </sender>
+      <recipient>
+        <id>1</id>
+        <name>דוד כהן</name>
+      </recipient>
+      <subject>שינוי בלוח הפעילויות</subject>
+      <content>חוג האמנות של יום רביעי הקרוב בוטל עקב מחלת המדריך. נעדכן על מועד חלופי בהמשך.</content>
+      <createdAt>2023-12-13T15:30:00.000Z</createdAt>
+      <read>true</read>
+      <readAt>2023-12-13T16:45:00.000Z</readAt>
+    </message>
+  </messages>
+
+  <!-- Medical data example -->
+  <medical>
+    <appointments>
+      <upcoming>
+        <appointment id="1">
+          <doctor>ד״ר דוד כהן</doctor>
+          <specialty>רופא משפחה</specialty>
+          <date>2023-12-18</date>
+          <time>10:00</time>
+          <duration>20</duration>
+          <location>מרפאה, קומה 1</location>
+          <notes>ביקור שגרתי</notes>
+          <preparationInstructions>אין צורך בהכנה מיוחדת</preparationInstructions>
+        </appointment>
+      </upcoming>
+      <past>
+        <appointment id="2">
+          <doctor>ד״ר רונית לוי</doctor>
+          <specialty>קרדיולוגית</specialty>
+          <date>2023-11-15</date>
+          <time>14:30</time>
+          <duration>30</duration>
+          <location>מרפאה, קומה 2</location>
+          <notes>בדיקת מעקב</notes>
+          <summary>לחץ דם תקין, דופק תקין. להמשיך טיפול נוכחי.</summary>
+        </appointment>
+      </past>
+    </appointments>
+
+    <medicalRecords userId="1">
+      <allergies>
+        <allergy>פניצילין</allergy>
+        <allergy>אגוזים</allergy>
+      </allergies>
+      <chronicConditions>
+        <condition>יתר לחץ דם</condition>
+        <condition>סוכרת מסוג 2</condition>
+      </chronicConditions>
+      <medications>
+        <medication>
+          <name>רמיפריל</name>
+          <dosage>5 מ״ג</dosage>
+          <frequency>פעם ביום בבוקר</frequency>
+          <purpose>טיפול בלחץ דם</purpose>
+        </medication>
+        <medication>
+          <name>מטפורמין</name>
+          <dosage>850 מ״ג</dosage>
+          <frequency>פעמיים ביום</frequency>
+          <purpose>טיפול בסוכרת</purpose>
+        </medication>
+      </medications>
+      <recentTests>
+        <test id="1">
+          <type>בדיקת דם</type>
+          <date>2023-11-10</date>
+          <summary>רמות סוכר תקינות, כולסטרול גבוה במקצת</summary>
+          <downloadUrl>/api/medical/tests/1/download</downloadUrl>
+        </test>
+      </recentTests>
+    </medicalRecords>
+  </medical>
+
+  <!-- Swimming Pool data example -->
+  <pool>
+    <hours lastUpdated="2023-12-01">
+      <weekdays>
+        <session type="morning" hours="07:00-09:00" />
+        <session type="afternoon" hours="16:00-18:00" />
+      </weekdays>
+      <weekend>
+        <session type="morning" hours="08:00-10:00" />
+        <session type="afternoon" hours="15:00-17:00" />
+      </weekend>
+      <specialHours>
+        <day date="2023-12-20" reason="תחזוקה" hours="סגור" />
+      </specialHours>
+    </hours>
+  </pool>
+
+  <!-- User Settings data example -->
+  <settings userId="1">
+    <languagePreference>he</languagePreference>
+    <darkMode>false</darkMode>
+    <fontSizeScale>1.0</fontSizeScale>
+    <highContrast>false</highContrast>
+    <voiceGuidance>true</voiceGuidance>
+    <notificationPreferences>
+      <activities>true</activities>
+      <menus>false</menus>
+      <medicalAppointments>true</medicalAppointments>
+      <messages>true</messages>
+    </notificationPreferences>
+  </settings>
+</goldenAgeData>

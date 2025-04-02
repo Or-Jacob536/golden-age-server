@@ -1,0 +1,55 @@
+// File: server/examples/menu-example.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<menu date="2023-06-01">
+  <meals>
+    <breakfast>
+      <mainDishes>
+        <dish>חביתה</dish>
+        <dish>חלה עם גבינות</dish>
+        <dish>סלט ירקות</dish>
+      </mainDishes>
+      <sides>
+        <dish>יוגורט</dish>
+        <dish>גרנולה</dish>
+        <dish>פירות</dish>
+      </sides>
+      <drinks>
+        <drink>תה</drink>
+        <drink>קפה</drink>
+        <drink>מיץ תפוזים</drink>
+      </drinks>
+    </breakfast>
+    <lunch>
+      <mainDishes>
+        <dish>עוף צלוי</dish>
+        <dish>דג אפוי</dish>
+        <dish>קציצות ירק</dish>
+      </mainDishes>
+      <sides>
+        <dish>אורז</dish>
+        <dish>תפוחי אדמה</dish>
+        <dish>ירקות מאודים</dish>
+      </sides>
+      <desserts>
+        <dish>עוגת תפוחים</dish>
+        <dish>פירות</dish>
+      </desserts>
+    </lunch>
+    <dinner>
+      <mainDishes>
+        <dish>מרק ירקות</dish>
+        <dish>לזניה</dish>
+        <dish>סלט</dish>
+      </mainDishes>
+      <sides>
+        <dish>לחם</dish>
+        <dish>גבינות</dish>
+        <dish>ירקות חתוכים</dish>
+      </sides>
+      <desserts>
+        <dish>פודינג</dish>
+        <dish>פירות</dish>
+      </desserts>
+    </dinner>
+  </meals>
+</menu>
